@@ -1,0 +1,177 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "nu6BUhBFPquxF6YyVpdrpvVAY8w=",
+			"path": "github.com/devfeel/dotweb",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "Em8VkwojgqQI+yZ/Pdt7R5TDTv0=",
+			"path": "github.com/devfeel/dotweb/cache",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "3lBPU9pU41DZkTJzk4pHz0tch+8=",
+			"path": "github.com/devfeel/dotweb/cache/redis",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "/G4d7G1hwoGcchghxVmL/dng5r0=",
+			"path": "github.com/devfeel/dotweb/cache/runtime",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "dbN0lMG63pbX9x/L6M1Io4hLTUc=",
+			"path": "github.com/devfeel/dotweb/config",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "duHPj0WT2koDAMc8w6BoFuv4FzY=",
+			"path": "github.com/devfeel/dotweb/core",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "og7P2hqJH7nrEi9NVgSQ9WPWw0k=",
+			"path": "github.com/devfeel/dotweb/framework/convert",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "cOtPyrMU15SUx0nGcTkWDKcRtxc=",
+			"path": "github.com/devfeel/dotweb/framework/crypto",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "JXZXWZAD2DXdmioG2Gv9bCnnyUI=",
+			"path": "github.com/devfeel/dotweb/framework/crypto/uuid",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "4Z38PGcqG97JS9APqYi9ioeCfvY=",
+			"path": "github.com/devfeel/dotweb/framework/encodes/gob",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "jGf55b5OMohkGznDRcN5Jk3Awe0=",
+			"path": "github.com/devfeel/dotweb/framework/exception",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "GED1ixQTvw9gAiZZO87rlVQ0DIQ=",
+			"path": "github.com/devfeel/dotweb/framework/file",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "wAuV8k7MEffN7PxNS2MJbDjKxmM=",
+			"path": "github.com/devfeel/dotweb/framework/hystrix",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "HdGh4EjF/jYGzOLGNyYu+zorhv0=",
+			"path": "github.com/devfeel/dotweb/framework/json",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "hwx8jv8Vh+Jmy0no6TjZS31Ss5I=",
+			"path": "github.com/devfeel/dotweb/framework/redis",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "EhLJZPh7a6+4Ix6yqtwzs+qjYoc=",
+			"path": "github.com/devfeel/dotweb/framework/reflects",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "O3tE8fKdyCmRq0KoCyJ6UYM4cVk=",
+			"path": "github.com/devfeel/dotweb/framework/sysx",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "ilC1JX7juygAYZx14OWiDby8UsA=",
+			"path": "github.com/devfeel/dotweb/logger",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "87I8IzITS9HehO+3jjU+PkyltNY=",
+			"path": "github.com/devfeel/dotweb/servers",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "d0qcLtTXpfiQ0hzqKNZyanVaSzk=",
+			"path": "github.com/devfeel/dotweb/session",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "2UmMbNHc8FBr98mJFN1k8ISOIHk=",
+			"path": "github.com/garyburd/redigo/internal",
+			"revision": "569eae59ada904ea8db7a225c2b47165af08735a",
+			"revisionTime": "2018-04-04T16:07:26Z"
+		},
+		{
+			"checksumSHA1": "3kM5bMyfqvdCfgQdOb01CR1aA74=",
+			"path": "github.com/garyburd/redigo/redis",
+			"revision": "569eae59ada904ea8db7a225c2b47165af08735a",
+			"revisionTime": "2018-04-04T16:07:26Z"
+		},
+		{
+			"checksumSHA1": "NLxrIei+y/HFTknuxPZB0G5UJxk=",
+			"path": "github.com/go-ini/ini",
+			"revision": "3be5ad479f69d4e08d7fe25edf79bf3346bd658e",
+			"revisionTime": "2019-03-27T02:48:45Z"
+		},
+		{
+			"checksumSHA1": "p3IB18uJRs4dL2K5yx24MrLYE9A=",
+			"path": "github.com/google/go-querystring/query",
+			"revision": "c8c88dbee036db4e4808d1f2ec8c2e15e11c3f80",
+			"revisionTime": "2019-03-18T16:54:38Z"
+		},
+		{
+			"checksumSHA1": "CHo41LTnECfBTDtjYb7V2BQqcIc=",
+			"path": "github.com/levigross/grequests",
+			"revision": "37c80f76a0dae6ed656cbc830643ba53f45fc79c",
+			"revisionTime": "2019-01-30T13:28:59Z"
+		},
+		{
+			"checksumSHA1": "bhX9GCMtACwF4bEFcVFRoHLz7xQ=",
+			"path": "golang.org/x/net/publicsuffix",
+			"revision": "d8887717615a059821345a5c23649351b52a1c0b",
+			"revisionTime": "2019-03-11T18:22:45Z"
+		},
+		{
+			"checksumSHA1": "7EZyXN0EmZLgGxZxK01IJua4c8o=",
+			"origin": "github.com/devfeel/dotweb/vendor/golang.org/x/net/websocket",
+			"path": "golang.org/x/net/websocket",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		},
+		{
+			"checksumSHA1": "rMz7tT9lxPa5rs4tN+eU05I/23c=",
+			"origin": "github.com/devfeel/dotweb/vendor/gopkg.in/yaml.v2",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "c7ab14e88d6545a88dba27a83ffcaa1a026e869e",
+			"revisionTime": "2019-02-20T06:41:12Z"
+		}
+	],
+	"rootPath": "wechat-token"
+}

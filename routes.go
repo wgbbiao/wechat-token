@@ -7,42 +7,49 @@ import (
 	"time"
 
 	"github.com/devfeel/dotweb"
-	"github.com/devfeel/middleware/basicauth"
 )
 
+//ResBody ResBody
 type ResBody struct {
 	Status      string `json:"status"`
 	AccessToken string `json:"access_token"`
+	ExpiresIn   int64  `json:"expires_in"`
 }
 
 var message = ResBody{
 	Status:      "failed",
 	AccessToken: "",
+	ExpiresIn:   0,
 }
 
 func tokenHandler(ctx dotweb.Context) error {
 	appid := ctx.QueryString("appid")
+	pwd := ctx.QueryString("pwd")
 	if appid == "" {
 		log.Println("ERROR: 没有提供AppID参数")
 		return ctx.WriteJsonC(http.StatusNotFound, message)
 	}
 
 	if secret, isExist := app.Accounts[appid]; isExist {
-		var access_token string
-		var record_time string
-		var expires_in string
+		//检查密码
+		if pwd != app.Passwords[appid] {
+			return ctx.WriteJsonC(http.StatusNotFound, message)
+		}
+		var accessToken string
+		var recordTime string
+		var expiresIn string
 
 		// 查询数据库中是否已经存在这个AppID的access_token
-		record_time = app.Query(appid, "timestamp")
-		access_token = app.Query(appid, "access_token")
-		expires_in = app.Query(appid, "expires_in")
-		expire_time, _ := strconv.ParseInt(record_time, 10, 64)
-		timeout, _ := strconv.ParseInt(expires_in, 10, 64)
+		recordTime = app.Query(appid, "timestamp")
+		accessToken = app.Query(appid, "access_token")
+		expiresIn = app.Query(appid, "expires_in")
+		expireTime, _ := strconv.ParseInt(recordTime, 10, 64)
+		timeout, _ := strconv.ParseInt(expiresIn, 10, 64)
 
-		if access_token != "" {
+		if accessToken != "" {
 			// 如果数据库中已经存在了Token，就检查过期时间，如果过期了就去GetToken获取
 			curTime := time.Now().Unix()
-			if curTime >= expire_time+timeout {
+			if curTime >= expireTime+timeout {
 				token := app.WxToken.Get(appid, secret)
 				// 没获得access_token就返回Failed消息
 				if token == "" {
@@ -53,8 +60,14 @@ func tokenHandler(ctx dotweb.Context) error {
 				//获取Token之后更新运行时环境，然后返回access_token
 				app.UpdateToken(appid)
 				message.AccessToken = app.WxToken.AccessToken
+				message.ExpiresIn = int64(app.WxToken.Expire)
 			} else {
-				message.AccessToken = access_token
+				message.AccessToken = accessToken
+				if app.WxToken.Expire == 0 {
+					message.ExpiresIn = 7200 - (curTime - expireTime)
+				} else {
+					message.ExpiresIn = int64(app.WxToken.Expire) - (curTime - expireTime)
+				}
 			}
 		} else {
 			token := app.WxToken.Get(appid, secret)
@@ -64,6 +77,7 @@ func tokenHandler(ctx dotweb.Context) error {
 			}
 			app.UpdateToken(appid)
 			message.AccessToken = app.WxToken.AccessToken
+			message.ExpiresIn = int64(app.WxToken.Expire)
 		}
 
 		message.Status = "success"
@@ -75,20 +89,7 @@ func tokenHandler(ctx dotweb.Context) error {
 	return ctx.WriteJsonC(http.StatusNotFound, message)
 }
 
+//InitRoute InitRoute
 func InitRoute(server *dotweb.HttpServer) {
-	// 定义Basic Auth的用户名和密码用来防止接口被恶意访问
-	var form = map[string]string{
-		"user": "api",
-		"pass": "wechat",
-	}
-
-	option := basicauth.BasicAuthOption{}
-	option.Auth = func(name, pwd string) bool {
-		if name == form["user"] && pwd == form["pass"] {
-			return true
-		}
-		return false
-	}
-
-	server.GET("/token", tokenHandler).Use(basicauth.Middleware(option))
+	server.GET("/token", tokenHandler)
 }
